@@ -1,0 +1,36 @@
+h1. Release Notes
+
+1.0.7 Bug Fix
+
+* Tweak to the git checkout to use remote tracking branch. Fixes problem Lance Johnston had checking out none-master branches.
+
+ 1.0.6 Upgrade for Bamboo 2.7
+
+* Provides a custom GitHub Web Repository to link builds back to GitHub
+
+1.0.5 Bug Fix
+
+* Updated to work with version Bamboo 2.5
+
+1.0.4 Bug Fix
+
+* The build branch now has the same name as the branch on the remote repository.  Previously, due to the way I was creating the local branch on the build agent, it always calling all the build branch "master". "Issue 11":http://github.com/andypols/git-bamboo-plugin/issues/issue/11.
+
+* Supports Submodules 
+
+* Renamed plugin dropdown to "Git", since it works with none GitHub repositories.
+
+1.0.3 Bug Fix
+
+* Now works correctly with remote agents (the server didn't have a local copy of the repository and therefore failed to calculate the change set).  Thanks to "Michael Rowe":http://mikerowecode.com for spotting this.
+
+1.0.2 Bug Fix
+
+* Handle case where we had a date for the previous build, but can't extract the latest update from the logs...
+
+1.0.1 Bug Fix
+
+* Fixed a silly bug. I was validating some fields that had been removed from the UI, so bamboo wouldn't let the user progress past the guthub page when creating a new repository. 
+* Handle timezone information in the git logs correctly
+
+1.0 First Release

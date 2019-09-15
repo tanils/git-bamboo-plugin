@@ -1,0 +1,20 @@
+<atlassian-plugin key="uk.co.pols.bamboo.gitplugin" name="Git Repository Plugin">
+    <plugin-info>
+        <description>Git Repository Plugin</description>
+        <version>@@VERSION@@</version>
+        <vendor name="Pols Consulting Ltd." url="http://www.pols.co.uk"/>
+    </plugin-info>
+
+    <repository key="github" name="Git Repository" class="uk.co.pols.bamboo.gitplugin.GitRepository">
+        <description>A Git Repository</description>
+        <resource type="freemarker" name="edit" location="uk/co/pols/bamboo/gitplugin/gitRepositoryEdit.ftl"/>
+        <resource type="freemarker" name="view" location="uk/co/pols/bamboo/gitplugin/gitRepositoryView.ftl"/>
+    </repository>
+
+    <webRepositoryViewer key="githubRepositoryViewer" name="GitHub Web Repository" class="uk.co.pols.bamboo.gitplugin.GitHubWebRepositoryViewer">
+        <description>Renders GitHub Links for commits.</description>
+        <resource type="freemarker" name="edit" location="uk/co/pols/bamboo/gitplugin/gitHubRepositoryViewerEdit.ftl"/>
+        <resource type="freemarker" name="view" location="uk/co/pols/bamboo/gitplugin/gitHubRepositoryViewerView.ftl"/>
+    </webRepositoryViewer>
+
+</atlassian-plugin>
